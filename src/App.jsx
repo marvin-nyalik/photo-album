@@ -1,16 +1,20 @@
-import Typography from "@mui/material/Typography";
-import AppBar from '@mui/material/AppBar';
-import Container  from "@mui/material/Container";
+import Feed from "./components/Feed";
+import Sidebar from "./components/Sidebar";
+import Navbar from "./components/Navbar";
+import Rightbar from "./components/Rightbar";
+import { Box, Stack } from "@mui/material";
 
 function App() {
   return (
-    <>
-      <Container maxWidth="xl" sx={{ backgroundColor: "#324ea8"}}>
-        <Typography variant="h4">Photo Album</Typography>
-      </Container>
-    </>
+    <Box>
+      <Navbar/>
+      <Stack direction="row">
+        <Sidebar/>
+        <Feed/>
+        <Rightbar/>
+      </Stack>
+    </Box>
   )
 }
 
-export default App
-
+export default App;
